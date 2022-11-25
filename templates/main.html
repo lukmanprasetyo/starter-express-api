@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>H8_fp3_kel2</title>
+</head>
+<body>
+    <form action="{{ url_for('predict') }}" method="post">
+    <header>
+        <div class="text-box">
+          <h1 id="title">PREDIKSI GAGAL JANTUNG</h1><hr>
+            <p id="description">create by :</p>
+            <p id="description">ANUGRAH AIDIN YOTOLEMBAH</p>
+            <p id="description">LUKMAN PRASETYO NUGROHO</p>
+            <p id="description">NATALIE NOVENRODUMETASA</p>
+            <h3><font size = '1'><p id="description">FINAL PROJECT 3 (KELOMPOK 2)</p></font></h3>
+        </div>
+      </header>
+          <div class="container">
+            <form id="survey-form" method="GET">
+      
+               <div class="labels">
+                <label id="name-label" for="name">* Umur</label></div>
+              <div class="input-tab">
+                <input class="input-field" type="text" id="name" name="umur" placeholder="umur" required="required"></div>
+
+                <div class="labels">
+                    <label id="name-label" for="name">* fraksi_ejeksi</label></div>
+                  <div class="input-tab">
+                    <input class="input-field" type="text" id="name" name="fraksi_ejeksi" placeholder="fraksi_ejeksi" required="required"></div>
+
+                    <div class="labels">
+                        <label id="name-label" for="name">* serum_creatinine</label></div>
+                      <div class="input-tab">
+                        <input class="input-field" type="text" id="name" name="serum_creatinine" placeholder="serum_creatinine" required="required"></div>
+
+                        <div class="labels">
+                            <label id="name-label" for="name">* sodium_kreatin</label></div>
+                          <div class="input-tab">
+                            <input class="input-field" type="text" id="name" name="sodium_kreatin" placeholder="sodium_kreatin" required="required"></div>
+
+                            <div class="labels">
+                                <label id="name-label" for="name">* anemia</label></div>
+                              <div class="input-tab">
+                                <input class="input-field" type="text" id="name" name="anemia"  placeholder="anemia" required="required"></div>
+                                
+                                <div class="labels">
+                                    <label id="name-label" for="name">* kreatin_fosfokinase</label></div>
+                                  <div class="input-tab">
+                                    <input class="input-field" type="text" id="name" name="kreatin_fosfokinase" placeholder="kreatin_fosfokinase" required="required"></div>
+                                    
+                                    <div class="labels">
+                                        <label id="name-label" for="name">* diabetes</label></div>
+                                      <div class="input-tab">
+                                        <input class="input-field" type="text" id="name" name="diabetes" placeholder="diabetes" placeholder" required="required"></div>
+
+                                        <div class="labels">
+                                            <label id="name-label" for="name">* tekanan_darah_tinggi</label></div>
+                                          <div class="input-tab">
+                                            <input class="input-field" type="text" id="name" name="tekanan_darah_tinggi" placeholder="tekanan_darah_tinggi" required="required"></div>
+
+                                            <div class="labels">
+                                                <label id="name-label" for="name">* platelets</label></div>
+                                              <div class="input-tab">
+                                                <input class="input-field" type="text" id="name" name="platelets" placeholder="platelets" required="required"></div>
+
+                                                <div class="labels">
+                                                    <label for="dropdown">Jenis Kelamin </label></div>
+                                                  <div class="input-tab">
+                                                    <select id="dropdown" name="jenis_kelamin">
+                                                      <option disabled value selected>Select an option</option>
+                                                      <option value="1">Laki - Laki</option>
+                                                      <option value="0">Perempuan</option>
+                                                      
+                                                    </select>
+                                                    </div>
+
+                                                    <div class="labels">
+                                                        <label for="dropdown">perokok </label></div>
+                                                      <div class="input-tab">
+                                                        <select id="dropdown" name="perokok">
+                                                          <option disabled value selected>Select an option</option>
+                                                          <option value="1">iya</option>
+                                                          <option value="0">tidak</option>
+                                                          
+                                                        </select>
+                                                        </div>
+
+                                                        <div class="labels">
+                                                            <label id="name-label" for="name">* waktu</label></div>
+                                                          <div class="input-tab">
+                                                            <input class="input-field" type="text" id="name" name="waktu" placeholder="waktu" required="required"></div>
+                                                        
+                                                        
+                                                            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                                                            <p>{{ prediction_text }}</p>
+                                                        
+            </form>
+                                                        
+                                                        
+                                                        </body>
+                                                        </html>
